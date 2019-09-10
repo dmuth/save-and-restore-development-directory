@@ -34,6 +34,11 @@ echo "# "
 echo "# Starting in $SRC..."
 echo "# "
 
+#
+# Remove the destination file if it already exists :-)
+#
+echo > $DEST
+
 for DIR in $(find . -name .git -type d)
 do
 
@@ -48,7 +53,7 @@ do
 	# Drop into that directory, get the remove, and jump back out!
 	#
 	pushd $DIR > /dev/null
-	REMOTE=$(git remote -v | head -n1 | awk '{print $2}')
+	REMOTE=$(git remote -v | egrep ^origin | head -n1 | awk '{print $2}')
 	popd > /dev/null
 
 	#
