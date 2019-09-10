@@ -37,7 +37,7 @@ echo "# "
 #
 # Remove the destination file if it already exists :-)
 #
-echo > $DEST
+echo -n > $DEST
 
 for DIR in $(find . -name .git -type d)
 do
