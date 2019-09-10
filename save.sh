@@ -10,23 +10,35 @@
 # Errors are fatal
 set -e
 
-if test ! "$1"
+if test ! "$2"
 then
 	echo "! "
-	echo "! Syntax: $0 directory"
+	echo "! Syntax: $0 directory output_file"
 	echo "! "
 	echo "! directory - Top-level directory to get Git remotes from. "
 	echo "! 	There can be as much nesting as you like. :-)"
+	echo "! "
+	echo "! output_file - Where to write the directory and Git remote information"
+	echo "! "
 	echo "! "
 	exit 1
 fi
 
 SRC=$1
+DEST=$PWD/$2
+ORIG=$PWD
 
 pushd $SRC > /dev/null
 
+echo "# "
+echo "# Starting in $SRC..."
+echo "# "
+
 for DIR in $(find . -name .git -type d)
 do
+
+	echo "Checking ${DIR}..."
+
 	#
 	# Get the name of the directory over the .git directory
 	#
@@ -47,12 +59,14 @@ do
 		continue
 	fi
 
-	echo -e "${DIR}\t${REMOTE}"
+	echo -e "${DIR}\t${REMOTE}" >> $DEST
 
 done
 
+echo "# "
+echo "# Done!  Git repo data written to ${DEST}"
+echo "# "
 
-# All done!
 
 
 
