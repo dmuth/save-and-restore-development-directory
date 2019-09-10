@@ -58,7 +58,7 @@ Q: What if a clone in `restore.sh` fails because I didn't have `ssh-agent` set u
 A: Then the script will stop.
 
 Q: What if a repo's directory exists due to a previously aborted run of `restore.sh`?
-A: If a repo's directory exists, it will be script.  Note that this could result in directories that aren't completely checked out.
+A: If a repo's directory exists, it will be sanity checked to make sure the repo is sane, and then skipped.
 
 
 ## Contact

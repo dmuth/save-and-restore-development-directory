@@ -61,11 +61,12 @@ do
 	if test -d $DIR
 	then
 		echo "# "
-		echo "# Directory ${DIR} already exists, skipping it..."
-		echo "# "
-		echo "# (Note that it may not have a valid Git checkout, if in doubt, remove it!)"
-		echo "# "
-		echo "# "
+		echo "# Directory ${DIR} already exists, performing sanity check on Git repo..."
+		pushd $DIR > /dev/null
+		git status > /dev/null
+		echo "# ...passed!"
+		popd > /dev/null
+
 		continue
 	fi
 
