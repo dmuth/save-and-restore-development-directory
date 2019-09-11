@@ -73,7 +73,7 @@ A: If a repo's directory exists, it will be sanity checked to make sure the repo
 - Email: doug.muth AT gmail DOT com
 - ...or just file an issue on this project!
 
-
+You can also <a href="https://www.dmuth.org/saving-and-restoring-your-development-directory/">read about this app on my blog</a>...
 
 
 
