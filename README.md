@@ -24,7 +24,7 @@ While I do back up my machine with Time Machine, I wanted additional
 options, especially in the scenario where I'm not restoring a machine, but
 instead *moving* to a new machine.
 
-So I wrote this scripts.  They're relatively straightforward.
+So I wrote these scripts.  They're relatively straightforward.
 
 
 ## Saving Your Development Directory
