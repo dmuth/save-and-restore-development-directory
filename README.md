@@ -42,7 +42,7 @@ and the `origin` Git resource it uses.
 
 Run the `restore.sh` script as follows:
 
-`bash <(https://raw.githubusercontent.com/dmuth/save-and-restore-development-directory/master/restore.sh) output-file.txt path/to/new/directory`
+`bash <(curl -s https://raw.githubusercontent.com/dmuth/save-and-restore-development-directory/master/restore.sh) output-file.txt path/to/new/directory`
 
 That will go through the file with directories and repos, and clone each 
 of them the target directory, mirroring the directory structure
