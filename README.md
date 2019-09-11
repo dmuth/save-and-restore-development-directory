@@ -31,7 +31,7 @@ So I wrote this scripts.  They're relatively straightforward.
 
 Run the `save.sh` script as follows:
 
-`./save.sh path/to/development/directory output-file.txt`
+`bash <(curl -s https://raw.githubusercontent.com/dmuth/save-and-restore-development-directory/master/save.sh) path/to/development/directory output-file.txt`
 
 This will go through your development directory, find every Git repo, 
 and write the directory path (relative to the path given above)
@@ -42,7 +42,7 @@ and the `origin` Git resource it uses.
 
 Run the `restore.sh` script as follows:
 
-`./restore.sh output-file.txt path/to/new/directory`
+`bash <(https://raw.githubusercontent.com/dmuth/save-and-restore-development-directory/master/restore.sh) output-file.txt path/to/new/directory`
 
 That will go through the file with directories and repos, and clone each 
 of them the target directory, mirroring the directory structure
