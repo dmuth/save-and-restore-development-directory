@@ -9,6 +9,13 @@
 set -e
 
 
+echo "# "
+echo "# Restore your development/ directory."
+echo "# "
+echo "# Git Repo: https://github.com/dmuth/save-and-restore-development-directory "
+echo "# "
+
+
 if test ! "$2"
 then
 	echo "! "

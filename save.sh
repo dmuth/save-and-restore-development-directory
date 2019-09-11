@@ -10,6 +10,12 @@
 # Errors are fatal
 set -e
 
+echo "# "
+echo "# Save your development/ directory."
+echo "# "
+echo "# Git Repo: https://github.com/dmuth/save-and-restore-development-directory "
+echo "# "
+
 if test ! "$2"
 then
 	echo "! "
