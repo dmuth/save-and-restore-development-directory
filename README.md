@@ -51,17 +51,17 @@ of the old development directory.
 
 ## FAQ
 
-Q: What if there are multiple remotes on a repo?
+### Q: What if there are multiple remotes on a repo?
 
 A: These scripts do not address this.
 
 
-Q: What if a clone in `restore.sh` fails because I didn't have `ssh-agent` set up, etc.?
+### Q: What if a clone in `restore.sh` fails because I didn't have `ssh-agent` set up, etc.?
 
 A: Then the script will stop.
 
 
-Q: What if a repo's directory exists due to a previously aborted run of `restore.sh`?
+### Q: What if a repo's directory exists due to a previously aborted run of `restore.sh`?
 
 A: If a repo's directory exists, it will be sanity checked to make sure the repo is sane, and then skipped.
 
