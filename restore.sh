@@ -65,6 +65,14 @@ do
 	DIR=$(echo $LINE | cut -f1)
 	REPO=$(echo $LINE | cut -f2)
 
+    SUBSTRING="git-rebase-i-playground/demo"
+
+    if [[ "${DIR}" == *"${SUBSTRING}"* ]]
+   then
+        echo "# This is a sample repo that doesn't (yet) exist, skipping!"
+        continue
+    fi
+
 	if test -d $DIR
 	then
 		echo "# "
@@ -80,6 +88,7 @@ do
 	echo "# "
 	echo "# Restoring ${DIR} with ${REPO}..."
 	echo "# "
+
 
 	mkdir -p $DIR
 	pushd $DIR > /dev/null
